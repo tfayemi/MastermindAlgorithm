@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a simple application of Donald Knuth's 5-Guess Mastermind algorithm as applied to the popular *Bulls and Cows* word game. 
+This is a simple application of Donald Knuth's MINMAX 5-Guess Mastermind algorithm as applied to the popular *Bulls and Cows* word game. 
 
 ## Donald Knuth's Mastermind
 
@@ -30,6 +30,10 @@ This project adapts the basic rules of Bulls and Cows from integers to the more 
 ## BACRunner
 
 BACRunner is automated. It runs the game and keeps the score. Testers can modify the number of runs and the "Mercy" limit (the number of guesses the Implimentation is allowed to make before the runner kills the round and calls is a loss, just to ensrue eventual termination should anything go wrong during a run). is played for several rounds to diminish the effect of blind random luck. The total number of guesses made over all these rounds becomes the final score of the player. As in golf, the lower the score, the better.
+
+The variable ​rounds determines how many secret words the game is played for before tallying up the final score. The tester script takes care of filtering of the words that contain duplicated letters, so that the player script does not have to worry about any such words in the given wordlist. In the Java version ​BACRunner.java​, the names for these settings are M​ INLEN​, ​MAXLEN​ and R​ OUNDS​, respectively.
+The choice of random secret words is done in ​pseudorandom fashion using the ​seed value defined inside the ​bacrunner.py script, named ​SEED in ​BACRunner.java​. Using a fixed ​seed value, the series of secret words produced by the tester will always be the same in every run. The fact that once the ​seed value has been fixed, all seemingly possible outcomes of the potentially branching future are illusory because the resulting execution is in reality just as deterministic as a train destined to follow its tracks, is actually a very good thing during the development stage! When debugging your script or optimizing its logic and accuracy, the exact same series of secret words can be repeated as often as you need to compare the results of the script before and after each change.
+One example run for ten rounds using one of the author's private model solutions produced the following output. After printing out the current parameters, each line first displays the secret word in square brackets, followed by the incorrect guesses made before hitting the secret word. For example, this particular player implementation needed five guesses to hit the secret word blinkers​. The last line of the output displays the total score, followed by the student ID and name information of that player.
 
 ## BACImplementation
 
