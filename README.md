@@ -8,7 +8,7 @@ This is a simple application of Donald Knuth's MINMAX 5-Guess Mastermind algorit
 
 **From Wikipedia**
 
-# Five-guess algorithm
+## Five-guess algorithm
 
 In 1977, Donald Knuth demonstrated that the codebreaker can solve the pattern in five moves or fewer, using an algorithm that progressively reduces the number of possible patterns.[11] The algorithm works as follows:
 
@@ -38,6 +38,10 @@ One example run for ten rounds using one of the author's private model solutions
 ## BACImplementation
 
 The implementation of the algorithm is automated. When run, the current play conditions are assessed and - via a rudimentary decision-making tree - words are eliminated from the master list. A suite of methods are used to trim the list and to determine the strongest guess. Finally, the method *public String guess(int n, List<String> guesses, List<Integer> bulls, List<Integer> cows);* returns a final guess to be compared to the "secret word" held privately in the BACRunner code.
+  
+The tester script calls this function exactly once in the beginning, before commencing the play of the individual rounds. The parameter ​words is the list of English words that could appear as secret words in the game, guaranteed to be in sorted lexicographic order. This wordlist is not passed as an argument to the other functions later in the game, so the player script is supposed to store and remember the wordlist for later use at this stage. This function is also welcome to perform any preprocessing of the wordlist and organizing its content into whatever data structures of your choosing that might later improve the speed and accuracy of guessing.
+
+n Java, due to the lamentable lack of tuples and triples in that language, the ​(word, bulls, cows) information triple is split into three separate lists so that the first list ​guesses contains the list of the previously guessed words. For each such ​word​, the corresponding element in the list ​bulls is the number of bulls in that same word, and similarly for ​cows​. (These three lists always therefore have the exact same size.)
   
   ## Results
   
