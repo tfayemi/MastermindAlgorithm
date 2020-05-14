@@ -46,8 +46,11 @@ In this short exercise, Donald Knuth's mastermind algorithm was proven to be tra
 ## Sources/Further Reading
 
 [The Computer as Mastermind by Donald E. Knuth](https://www.cs.uni.edu/~wallingf/teaching/cs3530/resources/knuth-mastermind.pdf)
+
 [Mastermind Algorithms - Wikipedia](https://en.wikipedia.org/wiki/Mastermind_(board_game)#Algorithms)
+
 [A Mathematical Approach to Simple Bulls and Cows by Namanyay Goel and Aditya Garg](https://vixra.org/pdf/1601.0302v1.pdf)
+
 [Tactile Tools for Teaching: An Implementation of Knuth's Algorithm for Mastering Mastermind by Thomas M. Fiore, Alexander Lang, and Antonella Perucca](http://www.antonellaperucca.net/FioreLangPerucca.pdf)
 
 
